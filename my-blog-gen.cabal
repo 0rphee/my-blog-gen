@@ -10,7 +10,7 @@ description:    Please see the README on Codeberg at <https://codeberg.org/0rphe
 author:         0rphee
 maintainer:     0rph3e@proton.me
 copyright:      2023 0rphee
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -23,12 +23,13 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Html
+      Html.Internal
   other-modules:
       Paths_my_blog_gen
   hs-source-dirs:
       src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
@@ -39,7 +40,7 @@ executable my-blog-gen-exe
       Paths_my_blog_gen
   hs-source-dirs:
       app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , my-blog-gen
@@ -52,7 +53,7 @@ test-suite my-blog-gen-test
       Paths_my_blog_gen
   hs-source-dirs:
       test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , my-blog-gen

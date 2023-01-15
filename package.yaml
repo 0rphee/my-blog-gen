@@ -1,6 +1,6 @@
 name:                my-blog-gen
 version:             0.1.0.0
-license:             BSD3
+license:             MIT
 author:              "0rphee"
 maintainer:          "0rph3e@proton.me"
 copyright:           "2023 0rphee"
@@ -28,7 +28,7 @@ ghc-options:
 - -Widentities
 - -Wincomplete-record-updates
 - -Wincomplete-uni-patterns
-- -Wmissing-export-lists
+# - -Wmissing-export-lists
 - -Wmissing-home-modules
 - -Wpartial-fields
 - -Wredundant-constraints
